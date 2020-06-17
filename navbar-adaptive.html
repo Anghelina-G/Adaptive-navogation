@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive navegation </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+<style>
+     body{
+        background-color: #333333;
+        font-family: Arial;
+    }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+        /* BIG SCREEN */
+    .navbar{
+        display: table;
+        background-color: #444444;
+        width: 100%;
+    }
+    .navbar ul{
+        display: table-row;
+    }
+    .navbar li{
+        display: table-cell;
+    }
+    .navbar li a{
+        padding: 1em;
+        display: block;
+        border-right: 1px solid #777777;
+        text-align: center;
+    }
+    .navbar li.brand{
+        width: 30%;
+    }
+    .navbar li.bars{
+        display: none;
+    }
+    /* MOBILE */
+    @media (max-width: 900px){
+        .navbar li{
+            display: none;
+        }
+        .navbar li.brand,
+        .navbar li.phone{
+            display: table-cell;
+        }
+        .navbar li.bars{
+        display: table-cell;
+    }
+    .bars span{
+        display: block;
+        line-height: 5px;
+    }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="brand"><h1><a href="">BRAND</a></h1></li>
+            <li class="phone"><a href="">+1234567894565</a></li>
+            <li><a href="">Delectus.</a></li>
+            <li><a href="">Odio.</a></li>
+            <li><a href="">Natus!</a></li>
+            <li><a href="">Dolorem.</a></li>
+            <li><a href="">Soluta!</a></li>
+            <li class="bars"><a href="">
+               <span> &#8213;</span>
+               <span> &#8213;</span>
+               <span> &#8213;</span>
+            </a></li>
+        </ul>
+    </nav>
+</body>
